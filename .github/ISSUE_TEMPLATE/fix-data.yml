@@ -1,0 +1,33 @@
+name: Fix Data
+description: Report incorrect or outdated information
+title: "[Fix] "
+labels: ["fix"]
+body:
+  - type: input
+    id: company
+    attributes:
+      label: Company or Relationship
+      placeholder: e.g. "Google" or "Google → Apple"
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: What's currently wrong?
+      placeholder: e.g. CEO name is outdated, description is inaccurate, relationship type is wrong
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: What should it be?
+      description: Provide the correct information with source if possible
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source (optional)
+      placeholder: Link to article, press release, or official announcement
+    validations:
+      required: false

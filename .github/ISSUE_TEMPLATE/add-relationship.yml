@@ -1,0 +1,74 @@
+name: Add / Fix Relationship
+description: Propose a new relationship or fix an existing one
+title: "[Relationship] "
+labels: ["relationship"]
+body:
+  - type: dropdown
+    id: action
+    attributes:
+      label: Action
+      options:
+        - Add new relationship
+        - Fix existing relationship
+        - Update relationship details
+    validations:
+      required: true
+  - type: input
+    id: company1
+    attributes:
+      label: Company 1
+      placeholder: e.g. Google
+    validations:
+      required: true
+  - type: input
+    id: company2
+    attributes:
+      label: Company 2
+      placeholder: e.g. Apple
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Relationship Type
+      options:
+        - ally
+        - rival
+        - investor
+        - acquirer
+        - lawsuit
+        - frenemy
+    validations:
+      required: true
+  - type: dropdown
+    id: strength
+    attributes:
+      label: Strength (1-5)
+      description: "1 = minor, 3 = significant, 5 = existential"
+      options:
+        - "1"
+        - "2"
+        - "3"
+        - "4"
+        - "5"
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: 1-3 sentences explaining the relationship
+      placeholder: Why are these companies connected? What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: events
+    attributes:
+      label: Key Events
+      description: Timeline of the relationship (2-6 events)
+      placeholder: |
+        - 2020: Something happened
+        - 2023: Another thing happened
+        - 2024: Latest development
+    validations:
+      required: false

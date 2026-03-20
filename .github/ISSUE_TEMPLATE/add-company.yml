@@ -1,0 +1,74 @@
+name: Add Company
+description: Propose a new company to add to the landscape
+title: "[Add] "
+labels: ["add-company"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Company Name
+      placeholder: e.g. Databricks
+    validations:
+      required: true
+  - type: dropdown
+    id: cluster
+    attributes:
+      label: Industry Cluster
+      options:
+        - AI
+        - Cloud
+        - Social
+        - Hardware
+        - Enterprise
+        - Fintech
+        - Transport
+        - Consumer
+    validations:
+      required: true
+  - type: input
+    id: founded
+    attributes:
+      label: Founded Year
+      placeholder: e.g. 2013
+    validations:
+      required: true
+  - type: input
+    id: hq
+    attributes:
+      label: Headquarters
+      placeholder: e.g. San Francisco, CA
+    validations:
+      required: true
+  - type: input
+    id: ceo
+    attributes:
+      label: Current CEO
+      placeholder: e.g. Ali Ghodsi
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: 1-2 sentences about the company
+      placeholder: What does this company do? Why is it notable?
+    validations:
+      required: true
+  - type: textarea
+    id: relationships
+    attributes:
+      label: Key Relationships
+      description: List notable relationships with other companies in the landscape
+      placeholder: |
+        - Rival to [Company] because ...
+        - Ally of [Company] because ...
+        - Acquired by [Company] in [year] ...
+    validations:
+      required: false
+  - type: textarea
+    id: why
+    attributes:
+      label: Why should this company be included?
+      description: What makes it important for the Silicon Valley tech landscape?
+    validations:
+      required: true

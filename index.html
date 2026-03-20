@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tech Industry Landscape</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Intro Animation -->
+<div id="intro">
+  <div id="intro-skyline"></div>
+  <div id="intro-title">
+    <div id="intro-main">TECH INDUSTRY</div>
+    <div id="intro-sub">L A N D S C A P E</div>
+  </div>
+  <div id="intro-companies"></div>
+</div>
+
+<div id="app" style="opacity:0">
+  <header id="header">
+    <div style="display:flex;align-items:baseline">
+      <h1>Tech Industry Landscape</h1>
+      <span class="subtitle">Interactive relationship map</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div id="search-container">
+        <span id="search-icon">&#128269;</span>
+        <input type="text" id="search" placeholder="Search companies..." autocomplete="off">
+      </div>
+      <a href="https://github.com/guzus/tech-landscape/issues/new/choose" target="_blank" rel="noopener" id="contribute-link">+ Propose</a>
+    </div>
+  </header>
+
+  <button id="filter-toggle" aria-label="Toggle filters">Filters</button>
+  <aside id="filters">
+    <div class="filter-section">
+      <h3>Relationship Types</h3>
+      <div id="type-filters"></div>
+    </div>
+    <div class="filter-section">
+      <h3>Industry Clusters</h3>
+      <div id="cluster-filters"></div>
+    </div>
+    <div class="filter-section">
+      <h3>Legend</h3>
+      <div id="legend"></div>
+    </div>
+  </aside>
+
+  <div id="graph-container">
+    <div id="tooltip"></div>
+    <div id="message-overlay"></div>
+  </div>
+
+  <aside id="sidebar">
+    <button id="sidebar-close">&times;</button>
+    <div id="sidebar-content"></div>
+  </aside>
+
+  <div id="timeline">
+    <div id="timeline-header">
+      <span id="timeline-label">Timeline</span>
+      <span id="timeline-year">2026</span>
+      <span id="timeline-stats"></span>
+    </div>
+    <div>
+      <input type="range" id="year-slider" min="2000" max="2026" value="2026" step="1">
+    </div>
+    <div id="year-marks"></div>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
